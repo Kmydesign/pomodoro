@@ -41,3 +41,14 @@ function updateTimerDisplay(){
 function padZeroes(num) {
     return num < 10 ? `0${num}` : num;
 }
+
+function changeOpacity() {
+    var image = document.getElementById("progress-cat");
+    if (image.style.opacity === "0.3"){
+        image.style.opacity = "1";
+    } else {
+        image.style.opacity = "0.3"
+    }
+}
+
+setInterval(changeOpacity, 25 * 60 * 1000)

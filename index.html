@@ -5,15 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nekodoro</title>
     <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <img class="logo" src="./images/Nekodoro-timer-logo.png">
+        <div class="progress-container">
+            <div><img id="progress-cat" src="./images/Cat-progress-01.png"></div>
+            <div><img id="progress-cat" src="./images/Cat-progress-01.png"></div>
+            <div><img id="progress-cat" src="./images/Cat-progress-01.png"></div>
+            <div><img id="progress-cat" src="./images/Cat-progress-01.png"></div>
+        </div>
         <div class="timer" id="timer">25:00</div>
             <div class="buttons">
-                <button onclick="startTimer()">Start</button>
-                <button onclick="stopTimer()">Stop</button>
-                <button onclick="resetTimer()">Reset</button>
+                <button onclick="startTimer()"><img class="media-btn" src="./images/play-solid.png"></button>
+                <button onclick="stopTimer()"><img class="media-btn" src="./images/stop-solid.png"></button>
+                <button onclick="resetTimer()"><img class="media-btn" src="./images/reset.png"></button>
     </div>
     <script src="script.js"></script>
 </body>

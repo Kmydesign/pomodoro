@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nekodoro</title>
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <h1>Nekodoro Timer</h1>
-        <div class="timer">
+        <div class="timer" id="timer">25:00</div>
             <div class="buttons">
-                
-            </div>
-        </div>
+                <button onclick="startTimer()">Start</button>
+                <button onclick="stopTimer()">Stop</button>
+                <button onclick="resetTimer()">Reset</button>
     </div>
-    
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,41 @@
+body {
+    background-color: #434343;
+    font-family: helvetica,sans-serif;
+}
+
+.container {
+    background-color: #393938;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 500px;
+}
+
+h1 {
+    color: #f6e394;
+}
+
+.timer {
+    color: #ad4957;
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+button {
+    background-color: #dd8b72;
+    border: none;
+    margin: 7px;
+    padding: 7px 15px;
+    color: #393938;
+
+}
+
+.buttons button:hover {
+    background-color: #dd8b72;
+}
+
+.buttons button:active {
+    box-shadow: 0 0 5px #434343;
+}

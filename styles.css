@@ -33,9 +33,9 @@ button {
 }
 
 .buttons button:hover {
-    background-color: #dd8b72;
+    background-color: #ad4957;
 }
 
 .buttons button:active {
-    box-shadow: 0 0 5px #434343;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }

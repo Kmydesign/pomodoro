@@ -1,39 +1,42 @@
 body {
-    background-color: #434343;
+    background-color: #060930;
     font-family: helvetica,sans-serif;
 }
 
 .container {
-    background-color: #393938;
+    background-color: #333456;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: auto;
     height: 500px;
+    border-radius: 10px;
 }
 
-h1 {
-    color: #f6e394;
+.logo {
+    height: 150px;
+    margin-bottom: 50px;
 }
 
 .timer {
-    color: #ad4957;
+    color: #F4ABC4;
     font-size: 45px;
     margin-bottom: 25px;
 }
 
 button {
-    background-color: #dd8b72;
+    background-color: #595B83;
     border: none;
     margin: 7px;
     padding: 7px 15px;
-    color: #393938;
+    color: #F4ABC4;
+    border-radius: 10px;
 
 }
 
 .buttons button:hover {
-    background-color: #ad4957;
+    background-color: #232442;
 }
 
 .buttons button:active {

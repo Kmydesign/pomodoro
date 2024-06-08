@@ -29,6 +29,7 @@ html, body {
     width: 90%;
     max-width: 400px;
     border-radius: 10px;
+    margin-bottom: 25px;
 }
 
 .footer {
@@ -40,8 +41,7 @@ html, body {
     justify-content: center;
     align-items: center;
     margin-top: auto;
-    position: relative;
-    bottom: 0;
+    margin-bottom: 50px;
 }
 
 .logo {
@@ -70,17 +70,20 @@ button {
     color: #F4ABC4;
     border-radius: 10px;
     box-shadow: 0 3px #060930;
+    font-weight: 900;
 }
 
 .media-btn {
     height: 15px;
 }
 
-.buttons button:hover {
+.buttons button:hover,
+#input-button:hover {
     background-color: #232442;
 }
 
-.buttons button:active {
+.buttons button:active,
+#input-button:active {
     box-shadow: 0 3px 1px rgba(0, 0, 0, 0.3);
 }
 
@@ -92,7 +95,7 @@ button {
     justify-content: center;
 }
 
-#progress-cat {
+.progress-cat {
     align-items: center;
     justify-content: center;
     padding: 10px;
@@ -150,4 +153,31 @@ button {
         font-size: 75px;
         max-width: 100%;
     }
+}
+
+.pomodoro-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pomodoro-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #060930; /* Default color for incomplete pomodoros */
+    margin: 0 10px;
+    margin-bottom: 30px;
+  }
+  
+  .pomodoro-circle.completed {
+    background-color: #F4ABC4; /* Color for completed pomodoros */
+  }
+
+  .volume-control {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    color: #060930;
+    background-color: #232442;
+    accent-color:#F4abc4;
 }

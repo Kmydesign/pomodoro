@@ -1,10 +1,22 @@
-body {
+html, body {
+    height: 100%;
+    margin: 0;
     background-color: #060930;
-    font-family: helvetica,sans-serif;
+    font-family: helvetica, sans-serif;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
 }
 
 .container {
@@ -14,22 +26,38 @@ body {
     align-items: center;
     align-content: center;
     padding: 50px;
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
     border-radius: 10px;
 }
 
+.footer {
+    width: 100%;
+    color: #F4ABC4;
+    text-align: center;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+
 .logo {
-    height: 150px;
+    height: auto;
+    max-width: 100%;
     margin-bottom: 25px;
+    object-fit: contain;
 }
 
 .timer {
     color: #F4ABC4;
-    font-size: 75px;
+    font-size: 10vw;
     margin-bottom: 25px;
     font-family: "Jersey 20", sans-serif;
     font-weight: 400;
     font-style: normal;
+    max-width: 100%;
+    text-align: center;
 }
 
 button {
@@ -40,14 +68,11 @@ button {
     color: #F4ABC4;
     border-radius: 10px;
     box-shadow: 0 3px #060930;
-
 }
 
 .media-btn {
     height: 15px;
 }
-
-
 
 .buttons button:hover {
     background-color: #232442;
@@ -56,17 +81,68 @@ button {
 .buttons button:active {
     box-shadow: 0 3px 1px rgba(0, 0, 0, 0.3);
 }
+
 .progress-container {
     display: flex;
     align-items: center;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #progress-cat {
     align-items: center;
     justify-content: center;
     padding: 10px;
-    height: 35px;
+    height: auto;
+    width: auto;
+    max-height: 35px;
+    max-width: 35px;
     opacity: 0.3;
     transition: opacity 0.5s ease;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 30px;
+    }
+    
+    .timer {
+        font-size: 20vw;
+        max-width: 100%;
+    }
+
+    .logo {
+        height: auto;
+        max-width: 150px;
+        object-fit: contain;
+    }
+
+    button {
+        margin: 5px;
+        padding: 5px 10px;
+    }
+
+    .media-btn {
+        height: 10px;
+    }
+
+    #progress-cat {
+        height: auto;
+        max-width: 25px;
+        max-height: 25px;
+        object-fit: contain;
+    }
+}
+
+@media (min-width: 601px) {
+    .logo {
+        max-height: 150px;
+    }
+    
+    .timer {
+        font-size: 75px;
+        max-width: 100%;
+    }
 }

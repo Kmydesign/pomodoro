@@ -11,12 +11,13 @@ html, body {
 
 .wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Default to row */
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100%;
     padding: 20px;
+    gap: 20px;
 }
 
 .container {
@@ -31,6 +32,16 @@ html, body {
     border-radius: 10px;
     margin-bottom: 25px;
 }
+#list-container {
+    max-height: 200px; /* Adjust based on the size of your tasks */
+    overflow-y: auto; /* Enables vertical scrolling */
+}
+
+#list-container li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
 .footer {
     width: 100%;
@@ -73,6 +84,11 @@ button {
     font-weight: 900;
 }
 
+li, ul {
+    list-style: none;
+    padding-inline-start:0px;
+}
+
 .media-btn {
     height: 15px;
 }
@@ -109,38 +125,41 @@ button {
 }
 
 @media (max-width: 600px) {
+    .wrapper {
+        flex-direction: column; /* Stack containers vertically */
+    }
     .container {
         padding-top: 30px;
         width: 60%;
         max-width: 200px;
     }
-    
     .timer {
         font-size: 20vw;
         max-width: 100%;
     }
-
     .logo {
         height: auto;
         max-width: 250px;
         object-fit: contain;
     }
-
     button {
         margin: 5px;
         padding: 5px 10px;
     }
-
     .media-btn {
         height: 10px;
     }
-
     #progress-cat {
         height: auto;
         max-width: 25px;
         max-height: 25px;
         object-fit: contain;
         flex-wrap: nowrap;
+    }
+    #todo-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -181,3 +200,27 @@ button {
     background-color: #232442;
     accent-color:#F4abc4;
 }
+
+.completed {
+    text-decoration: line-through;
+}
+
+#todo-list {
+    color: #F4ABC4;
+}
+
+#input-box {
+    background-color: #060930;
+    color: #F4ABC4;
+    border: none;
+}
+
+#input-box:active {
+    border-color: #F4ABC4;
+}
+
+input[type="checkbox"] {
+    accent-color: #F4ABC4
+    ;
+}
+

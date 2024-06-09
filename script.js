@@ -90,3 +90,60 @@ document.addEventListener('DOMContentLoaded', () => {
 function changeVolume(volume) {
     breakSound.volume = volume;
 }
+
+document.getElementById('input-box').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        addTask();
+        event.preventDefault(); // Prevent the form from submitting if it's part of a form
+    }
+});
+
+function addTask() {
+    const inputBox = document.getElementById('input-box');
+    const listContainer = document.getElementById('list-container');
+    const taskText = inputBox.value.trim();
+
+    if (taskText === '') {
+        alert('Please enter a task.');
+        return;
+    }
+
+    const newTask = document.createElement('li');
+    const taskContent = document.createElement('span');
+    taskContent.textContent = taskText;
+
+    const checkBox = document.createElement('input');
+    checkBox.type = 'checkbox';
+    checkBox.addEventListener('change', function() {
+        if (this.checked) {
+            newTask.classList.add('completed');
+        } else {
+            newTask.classList.remove('completed');
+        }
+        updateCounters();
+    });
+
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'X';
+    removeButton.addEventListener('click', function() {
+        listContainer.removeChild(newTask);
+        updateCounters();
+    });
+
+    newTask.appendChild(checkBox);
+    newTask.appendChild(taskContent);
+    newTask.appendChild(removeButton);
+    listContainer.appendChild(newTask);
+    inputBox.value = ''; // Clear the input box after adding the task
+    updateCounters();
+}
+
+function updateCounters() {
+    const allTasks = document.querySelectorAll('#list-container li');
+    const completedTasks = document.querySelectorAll('#list-container .completed');
+    const completedCounter = document.getElementById('completed-counter');
+    const uncompletedCounter = document.getElementById('uncompleted-counter');
+
+    completedCounter.textContent = completedTasks.length;
+    uncompletedCounter.textContent = allTasks.length - completedTasks.length;
+}

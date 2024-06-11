@@ -1,6 +1,5 @@
 html, body {
-    height: 100%;
-    margin: 0;
+    margin : 0px;
     background-color: #060930;
     font-family: helvetica, sans-serif;
     display: flex;
@@ -11,13 +10,10 @@ html, body {
 
 .wrapper {
     display: flex;
-    flex-direction: row; /* Default to row */
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    padding: 20px;
     gap: 20px;
+    padding: 20px;
+    flex-direction: row;
 }
 
 .container {
@@ -32,6 +28,35 @@ html, body {
     border-radius: 10px;
     margin-bottom: 25px;
 }
+
+#notePad {
+    background-color: #232442;
+    color: #F4abc4;
+    margin-top: 30px;
+    height: 385px;
+    width: 300px;
+    border :none;
+    border-radius: 10px;
+    resize: none;
+}
+
+#notePad:focus {
+    border: none;
+    outline: none;
+}
+
+.side-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding: 50px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+
+}
 #list-container {
     max-height: 200px; /* Adjust based on the size of your tasks */
     overflow-y: auto; /* Enables vertical scrolling */
@@ -39,7 +64,7 @@ html, body {
 
 #list-container li {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
     }
 
@@ -48,11 +73,8 @@ html, body {
     color: #F4ABC4;
     text-align: center;
     display: flex;
-    height: auto;
     justify-content: center;
     align-items: center;
-    margin-top: auto;
-    margin-bottom: 50px;
 }
 
 .logo {
@@ -87,6 +109,7 @@ button {
 li, ul {
     list-style: none;
     padding-inline-start:0px;
+    text-align: left;
 }
 
 .media-btn {
@@ -125,13 +148,23 @@ li, ul {
 }
 
 @media (max-width: 600px) {
+
+    
     .wrapper {
-        flex-direction: column; /* Stack containers vertically */
+        flex-direction: column;
+        display: flex;
+        align-items: center;
     }
     .container {
         padding-top: 30px;
         width: 60%;
         max-width: 200px;
+    }
+
+    #notePad {
+   
+        height: 300px;
+        width: 220px;
     }
     .timer {
         font-size: 20vw;
@@ -160,6 +193,14 @@ li, ul {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .footer {
+        color: #F4ABC4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
     }
 }
 

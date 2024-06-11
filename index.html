@@ -29,9 +29,14 @@
             </div>
             <div class="volume-control">
                 <input type="range" id="volume" name="volume" min="0" max="1" step="0.1" value="1" onchange="changeVolume(this.value)">
-            </div>
+            </div> 
+            <textarea id="notePad" placeholder="Type your notes here...""></textarea>
         </div>
-        <div class="container" id="todo-list">
+        <div class="side-container">
+        <div class="container" id="music-player">
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1746426249&color=%23f4abc4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/lofi_girl" title="Lofi Girl" target="_blank" style="color: #cccccc; text-decoration: none;">Lofi Girl</a> · <a href="https://soundcloud.com/lofi_girl/sets/study-session-beats-to-study" title="Study Session - beats to study/focus to" target="_blank" style="color: #cccccc; text-decoration: none;">Study Session - beats to study/focus to</a></div>
+        </div>
+            <div class="container" id="todo-list">
             <div id="header"><h3>To do list</h3></div>
             <div id="todo-form">
                 <input
@@ -53,9 +58,10 @@
         </div>
       </div>
     </div>
-            </div>
-        <div class="footer">© Kmy Design 2024 | Made with love 💗</div>
+</div>
     </div>
+    <div class="footer">© Kmy Design 2024 | Made with love 💗</div>
+
     <audio id="breakSound" src="images/Bell-pomodoro.mp3" preload="auto"></audio>
     <script src="script.js"></script>
 </body>

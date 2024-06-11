@@ -116,9 +116,9 @@ function addTask() {
     checkBox.type = 'checkbox';
     checkBox.addEventListener('change', function() {
         if (this.checked) {
-            newTask.classList.add('completed');
+            taskContent.classList.add('completed');
         } else {
-            newTask.classList.remove('completed');
+            taskContent.classList.remove('completed');
         }
         updateCounters();
     });

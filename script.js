@@ -123,7 +123,7 @@ function addTask() {
         updateCounters();
     });
 
-    const removeButton = document.createElement('button');
+    const removeButton = document.createElement('button-x');
     removeButton.textContent = 'X';
     removeButton.addEventListener('click', function() {
         listContainer.removeChild(newTask);
@@ -146,4 +146,13 @@ function updateCounters() {
 
     completedCounter.textContent = completedTasks.length;
     uncompletedCounter.textContent = allTasks.length - completedTasks.length;
+}
+
+function clearTaskList() {
+    const listContainer = document.getElementById('list-container');
+    listContainer.innerHTML ='';
+
+    //Reset the task counters
+    document.getElementById('complete-counter').textContent ='0';
+    document.getElementById('uncompleted-counter').textContent='0'
 }

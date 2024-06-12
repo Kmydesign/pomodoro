@@ -43,7 +43,7 @@ textarea {
     color: #F4abc4;
     margin-top: 30px;
     height: 385px;
-    width: 300px;
+    width: 100%;
     border :none;
     border-radius: 10px;
     resize: none;
@@ -71,14 +71,33 @@ textarea {
 
 #list-container {
     max-height: 200px; /* Adjust based on the size of your tasks */
-    overflow-y: auto; /* Enables vertical scrolling */
+    overflow-y: auto;/* Enables vertical scrolling */
+}
+
+#task-wrapper {
+    background-color: #232442; 
+    width: 100%;    
+    text-align: center;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 10px
+
 }
 
 #list-container li {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
+        width: 100%;
     }
+
+#task-counters {
+    background-color: #F4abc4;
+    border-radius: 10px;
+    color: #232442;
+    padding: 10px;
+    font-size: small;
+}
 
 .footer {
     width: 100%;
@@ -110,7 +129,7 @@ textarea {
 button {
     background-color: #595B83;
     border: none;
-    margin: 7px;
+    margin: 15px;
     padding: 7px 15px;
     color: #F4ABC4;
     border-radius: 10px;
@@ -129,12 +148,14 @@ li, ul {
 }
 
 .buttons button:hover,
-#input-button:hover {
+#input-button:hover,
+#clear:hover {
     background-color: #232442;
 }
 
 .buttons button:active,
-#input-button:active {
+#input-button:active,
+#clear:active {
     box-shadow: 0 3px 1px rgba(0, 0, 0, 0.3);
 }
 
@@ -188,7 +209,7 @@ li, ul {
         object-fit: contain;
     }
     button {
-        margin: 5px;
+        margin: 15px;
         padding: 5px 10px;
     }
     .media-btn {
@@ -281,3 +302,17 @@ input[type="checkbox" i] {
 
 }
 
+button-x {
+    background-color: #F4ABC4;
+    color: #232442;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: smaller;
+    border-radius: 5px;
+    display: flex;
+    cursor: pointer;
+}
+
+button-x:hover {
+    background-color: #f881ab;
+}

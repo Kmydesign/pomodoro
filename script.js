@@ -153,6 +153,7 @@ function clearTaskList() {
     listContainer.innerHTML ='';
 
     //Reset the task counters
-    document.getElementById('complete-counter').textContent ='0';
-    document.getElementById('uncompleted-counter').textContent='0'
+    document.getElementById('completed-counter').textContent ='0';
+    document.getElementById('uncompleted-counter').textContent='0';
+   
 }
